@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "legacy_bows",
+  "version": "${version}",
+  "name": "Legacy Bows",
+  "description": "Bring back the old legacy machine gun bows! This mod also works for crossbows and both of them can be enabled and disabled in the config!",
+  "authors": [
+    "SmushyTaco"
+  ],
+  "contact": {
+    "homepage": "https://www.smushytaco.com/",
+    "issues": "https://www.curseforge.com/minecraft/mc-mods/legacy-bows/issues/",
+    "sources": "https://github.com/realSmushyTaco/Legacy-Bows/"
+  },
+  "license": "GNU Lesser General Public License version 3 (LGPLv3)",
+  "icon": "assets/legacy_bows/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "com.smushytaco.legacy_bows.LegacyBows"
+      }
+    ],
+    "modmenu": [
+      "com.smushytaco.legacy_bows.configuration_support.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "legacy_bows.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "fabric-language-kotlin": ">=1.5.0+kotlin.1.4.31",
+    "minecraft": "1.16.x",
+    "cloth-config2": ">=4.11.19",
+    "modmenu": ">=1.9.0+build.27"
+  }
+}

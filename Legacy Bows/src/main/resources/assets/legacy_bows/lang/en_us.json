@@ -1,0 +1,5 @@
+{
+  "text.autoconfig.legacy_bows.title": "Legacy Bows Configuration",
+  "text.autoconfig.legacy_bows.option.enableLegacyBows": "Enable Legacy Bows",
+  "text.autoconfig.legacy_bows.option.enableLegacyCrossbows": "Enable Legacy Crossbows"
+}

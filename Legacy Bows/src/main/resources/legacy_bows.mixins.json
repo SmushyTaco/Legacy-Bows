@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.smushytaco.legacy_bows.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "BowMixin",
+    "CrossbowMixin"
+  ]
+}
