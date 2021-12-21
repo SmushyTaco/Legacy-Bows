@@ -26,7 +26,7 @@ public abstract class BowMixin {
         if (!LegacyBows.INSTANCE.getConfig().getEnableLegacyBows()) return;
         ItemStack itemStack = user.getStackInHand(hand);
         boolean bl = !user.getArrowType(itemStack).isEmpty();
-        if (!user.isCreative() && !bl) return;
+        if (!user.getAbilities().creativeMode && !bl) return;
         onStoppedUsing(user.getStackInHand(hand), world, user, 0);
         cir.setReturnValue(TypedActionResult.fail(itemStack));
     }
