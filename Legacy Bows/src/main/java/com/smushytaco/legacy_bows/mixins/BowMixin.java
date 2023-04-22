@@ -25,7 +25,7 @@ public abstract class BowMixin {
     public void hookUse(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
         if (!LegacyBows.INSTANCE.getConfig().getEnableLegacyBows()) return;
         ItemStack itemStack = user.getStackInHand(hand);
-        boolean bl = !user.getArrowType(itemStack).isEmpty();
+        boolean bl = !user.getProjectileType(itemStack).isEmpty();
         if (!user.getAbilities().creativeMode && !bl) return;
         onStoppedUsing(user.getStackInHand(hand), world, user, 0);
         cir.setReturnValue(TypedActionResult.fail(itemStack));
