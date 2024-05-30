@@ -17,7 +17,6 @@ public abstract class CrossbowMixin {
     @Shadow
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {}
     @ModifyReturnValue(method = "getPullProgress", at = @At("RETURN"))
-    @SuppressWarnings("unused")
     private static float hookGetPullProgress(float original, int useTicks) { return !LegacyBows.INSTANCE.getConfig().getEnableLegacyCrossbows() ? original : 1.0F; }
     @ModifyReturnValue(method = "use", at = @At("RETURN"))
     public TypedActionResult<ItemStack> hookUse(TypedActionResult<ItemStack> original, World world, PlayerEntity user, Hand hand) {
@@ -27,6 +26,5 @@ public abstract class CrossbowMixin {
         return TypedActionResult.fail(itemStack);
     }
     @ModifyExpressionValue(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;isEmpty()Z"))
-    @SuppressWarnings("unused")
     private boolean hookUseIsEmpty(boolean original) { return LegacyBows.INSTANCE.getConfig().getEnableLegacyCrossbows() || original; }
 }
