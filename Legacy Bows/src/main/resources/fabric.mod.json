@@ -21,9 +21,6 @@
         "adapter": "kotlin",
         "value": "com.smushytaco.legacy_bows.LegacyBows"
       }
-    ],
-    "modmenu": [
-      "com.smushytaco.legacy_bows.configuration_support.ModMenuIntegration"
     ]
   },
   "mixins": [
