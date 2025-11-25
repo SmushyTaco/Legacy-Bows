@@ -12,7 +12,7 @@
     "issues": "https://www.curseforge.com/minecraft/mc-mods/legacy-bows/issues/",
     "sources": "https://github.com/SmushyTaco/Legacy-Bows/"
   },
-  "license": "GNU Lesser General Public License version 3 (LGPLv3)",
+  "license": "Apache-2.0",
   "icon": "assets/legacy_bows/icon.png",
   "environment": "*",
   "entrypoints": {
